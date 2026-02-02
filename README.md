@@ -96,6 +96,7 @@ Email usernames are hidden
 Only the last four digits of credit cards are shown
  
 **Example of output structure:**
+
 ![alt text](image-1.png)
 
 ![alt text](image-2.png)
@@ -116,5 +117,5 @@ Only the last four digits of credit cards are shown
 ## How to run
 **Requirements**
 -Node.js installed
-**Run Command**
+## Run Command
 node regex_program.js
