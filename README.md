@@ -94,14 +94,6 @@ alu_regex-data-extraction-honnete-1/
 Email usernames are hidden
 
 Only the last four digits of credit cards are shown
- 
-**Example of output structure:**
-
-![alt text](image-1.png)
-
-![alt text](image-2.png)
-
-![alt text](image-3.png)
 
 ## Security & Validation Considerations
 - Regex patterns are written to be strict and defensive
