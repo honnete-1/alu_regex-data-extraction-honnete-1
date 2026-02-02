@@ -1,0 +1,169 @@
+Inbox dump 07/11 — copied from somewhere between Slack, Gmail, and a server console. If you’re reading this later, sorry in advance.
+
+---
+
+Hey team,
+
+Just looping you in. I sent the report to [user@example.com](mailto:user@example.com) around 14:30 but didn’t get a reply yet. Could be buried, or maybe I typoed it as userexample.com again (classic me). If they don’t reply by 02:45 PM we’ll escalate. Also, someone please remind [admin+alerts@sub.domain.org](mailto:admin+alerts@sub.domain.org) that the cron job still fails on Sundays.
+
+> On Fri at 7:05 am, [first.last@company.co.uk](mailto:first.last@company.co.uk) wrote:
+> “The link [https://www.example.com](https://www.example.com) is fine, but htp://example.com doesn’t load. Also who deployed this?”
+
+I checked the logs. There’s a weird redirect from https:/example.com which obviously shouldn’t even be a thing. At least [http://sub.domain.org/page?id=10](http://sub.domain.org/page?id=10) still works, although [www.example](http://www.example) just hangs there doing nothing.
+
+---
+
+System log snippet (copied raw, don’t judge):
+
+```
+[INFO] 2026-01-07 14:30:01 Connection opened from (123) 456-7890
+[WARN] 2026-01-07 14:30:02 Invalid callback number phone: 123-45-67890
+[DEBUG] user session started for @company.com
+[ERROR] payment failed for card 1234 5678 9012
+```
+
+Yeah… that “@company.com” line is suspicious. There’s also another failure where someone tried abcd-efgh-ijkl-mnop as a card number. Not sure if that was a test or a joke.
+
+---
+
+Random note from my desktop (don’t ask):
+
+Remember to call +1 123 456 7890 about the invoice (£500) that was paid twice. The first charge was $19.99 at 14:30, second one maybe at 25:61 (which obviously isn’t a real time, but that’s what the UI showed 🤦). Finance keeps emailing from name@domain and wondering why replies bounce.
+
+---
+
+Marketing draft v3 (unfinished, messy):
+
+<p>Welcome to our platform!</p>
+<div class="container">
+  Sign up now for only €1,234.56 and get instant access.
+  Offer ends at 7:5 AM tomorrow!!!
+</div>
+
+Ignore the last line, 7:5 AM looks wrong — should be 7:05 am but someone edited it at midnight. Also remove the broken tag below:
+
+<p>>
+
+And why is there <div floating around with no closing bracket again?
+
+---
+
+Customer support transcript, pasted without cleanup:
+
+Customer: “I tried to log in at 13:90 PM and it failed.”
+Agent: “That time doesn’t exist.”
+Customer: “Well your system accepted it. Also my email is [user@.com](mailto:user@.com)”
+Agent: “That’s… not an email.”
+Customer: “It worked yesterday. The site [https://www.example.com](https://www.example.com) told me so.”
+
+Agent note: user also provided card 1111-2222-333 and complained checkout rejected it. Escalated to tier 2.
+
+---
+
+Some random hashtags from social listening:
+
+We’re trending with #example and #ThisIsATest but someone keeps spamming ##double and # hello which breaks the parser. There’s also just a lonely # floating around in comments. Fun.
+
+---
+
+Dev chat (copied from phone, formatting lost):
+
+— Did you push the fix?
+— Yeah around 02:45 PM.
+— Why does the receipt show USD 100 instead of $100?
+— No idea. Also saw $12,34.56 in one payload 🤯
+— That’s not how commas work.
+— Tell that to the vendor.
+
+BTW the webhook callback URL was set to https:/example.com again. Third time this week.
+
+---
+
+HTML email template someone tested in prod (why??):
+
+```
+<div class="email">
+  <img src="img.jpg" alt="text">
+  <img src=img.jpg>
+  <p>Thanks for your purchase of $19.99</p>
+  <p>Your card 1234-5678-9012-3456 has been charged.</p>
+</div
+```
+
+Yes, the closing tag is missing the >. Yes, Outlook still rendered it somehow.
+
+---
+
+Another email chain, older:
+
+From: [alerts@system.local](mailto:alerts@system.local)
+To: [admin+alerts@sub.domain.org](mailto:admin+alerts@sub.domain.org)
+Sent: 7:05 am
+
+Body:
+Service restarted successfully at 14:30.
+Health check pinged [https://www.example.com](https://www.example.com) ✔
+Fallback htp://example.com ✘
+Contact number on file: 123456
+
+Please update contact info to a real number like 123-456-7890 or (123) 456-7890.
+
+---
+
+Sticky note content recovered from backup:
+
+“Lunch w/ Sam at 02:45 PM. Pay him back £500 cash. If late, text 12-3456-789 (his old number, probably dead). Reminder: blog draft includes #2026Goals and link [http://sub.domain.org/page?id=10](http://sub.domain.org/page?id=10) — don’t forget.”
+
+---
+
+Blog draft (raw, with comments inline):
+
+I woke up at 7:05 am, checked my phone, and immediately saw 14 missed emails. One from [user@example.com](mailto:user@example.com), another from userexample.com (??), and a third from name@domain. Somewhere between that chaos, Stripe emailed a receipt for $ but no amount, which feels illegal.
+
+<!-- TODO: fix this later -->
+
+<div class="post">
+  <p>Our growth has been amazing.</p>
+  <p>Revenue hit €1,234.56 last week.</p>
+  <p>Someone typed $12,34.56 in checkout again.</p>
+</div>
+
+Also add hashtags: #Growth #2026Goals ##double
+
+---
+
+QA notes, copied from a PDF:
+
+* Valid test email: [first.last@company.co.uk](mailto:first.last@company.co.uk)
+
+* Another one: [admin+alerts@sub.domain.org](mailto:admin+alerts@sub.domain.org)
+
+* Reject: [user@.com](mailto:user@.com)
+
+* Reject: @company.com
+
+* Valid time: 14:30
+
+* Valid time: 02:45 PM
+
+* Reject time: 7:5 AM
+
+* Reject time: 25:61
+
+But honestly these notes are outdated. The new build still accepts 13:90 PM somehow.
+
+---
+
+Late-night chat message (typos preserved):
+
+“hey r u up? site is down. url is [www.example](http://www.example) but it wont open. real one is [https://www.example.com](https://www.example.com) i think. call me at +1 123 456 7890 if u see this. also who charged my card 1234 5678 9012 3456 again???”
+
+---
+
+Server footer text from some legacy page:
+
+Contact us at [support@company.co.uk](mailto:support@company.co.uk) or visit [https://www.example.com/support](https://www.example.com/support).
+Office hours: 9:00 AM – 5:00 PM.
+Emergency line: phone: 123-45-67890.
+Promo price: $19.99 (was $).
+

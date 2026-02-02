@@ -1,0 +1,95 @@
+{
+  "emails": [
+    "*****@example.com",
+    "*****@example.com",
+    "*****@sub.domain.org",
+    "*****@sub.domain.org",
+    "*****@company.co.uk",
+    "*****@company.co.uk",
+    "*****@system.local",
+    "*****@system.local",
+    "*****@sub.domain.org",
+    "*****@sub.domain.org",
+    "*****@example.com",
+    "*****@example.com",
+    "*****@company.co.uk",
+    "*****@company.co.uk",
+    "*****@sub.domain.org",
+    "*****@sub.domain.org",
+    "*****@company.co.uk",
+    "*****@company.co.uk"
+  ],
+  "urls": [
+    "https://www.example.com",
+    "https://www.example.com",
+    "http://sub.domain.org/page?id=10](http://sub.domain.org/page?id=10)",
+    "http://www.example",
+    "https://www.example.com",
+    "https://www.example.com",
+    "https://www.example.com",
+    "https://www.example.com",
+    "http://sub.domain.org/page?id=10](http://sub.domain.org/page?id=10)",
+    "http://www.example",
+    "https://www.example.com",
+    "https://www.example.com",
+    "https://www.example.com/support](https://www.example.com/support)."
+  ],
+  "phoneNumbers": [
+    "(123) 456-7890",
+    "+1 123 456 7890",
+    "123-456-7890",
+    "(123) 456-7890",
+    "+1 123 456 7890"
+  ],
+  "creditCards": [
+    "**** **** **** 3456",
+    "**** **** **** 3456"
+  ],
+  "time": [
+    "14:30",
+    "02:45 PM",
+    "7:05 am",
+    "14:30",
+    "14:30",
+    "14:30",
+    "7:05 am",
+    "02:45 PM",
+    "7:05 am",
+    "14:30",
+    "02:45 PM",
+    "7:05 am",
+    "14:30",
+    "02:45 PM",
+    "9:00 AM",
+    "5:00 PM"
+  ],
+  "htmlTags": [
+    "<p>",
+    "<div class=\"container\">",
+    "<p>",
+    "<div class=\"email\">",
+    "<img src=\"img.jpg\" alt=\"text\">",
+    "<img src=img.jpg>",
+    "<p>",
+    "<p>",
+    "<div class=\"post\">",
+    "<p>",
+    "<p>",
+    "<p>"
+  ],
+  "hashtags": [
+    "#example",
+    "#ThisIsATest",
+    "#double",
+    "#Growth",
+    "#double"
+  ],
+  "currency": [
+    "$19.99",
+    "$100",
+    "$12",
+    "$19.99",
+    "$12",
+    "$19.99"
+  ]
+}
