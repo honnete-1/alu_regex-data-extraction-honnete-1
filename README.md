@@ -117,5 +117,5 @@ Only the last four digits of credit cards are shown
 ## How to run
 **Requirements**
 -Node.js installed
-## Run Command
+### Run Command
 node regex_program.js
