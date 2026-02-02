@@ -3,10 +3,10 @@ const fs = require("fs");
 // Read input file
 const Text = fs.readFileSync("sample.txt", "utf8");
 
-// Regex patterns (manually written & stricter)
+// Regex patterns 
 const patterns = {
-/*Email pattern explanations: the pattern requires at least one character before and after '@' and prevents emails starting 
-or ending with dots or hyphens */
+/*Email pattern explanations: the pattern requires at least one character before 
+and after '@' and prevents emails starting or ending with dots or hyphens */
 // it forces a valid top-level domain (e.g: .com, .org,etc)
 // is strict to avoid matching broken inputs like user@.com  
  emails: /\b[a-zA-Z0-9][a-zA-Z0-9._-]*[a-zA-Z0-9]@[a-zA-Z0-9][a-zA-Z0-9.-]*\.[a-zA-Z]{2,}\b/g,
