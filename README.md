@@ -27,6 +27,15 @@ According to assignment instructions, no UI or form design is required. The focu
 
 ---
 
+## How to run
+**Requirements**
+-Node.js installed
+## Run Command
+```javascript
+node regex_program.js
+```
+---
+
 ## Data Types Extracted
 
 This implementation supports the following data types:
@@ -106,8 +115,4 @@ Only the last four digits of credit cards are shown
 
 - The system demonstrates security awareness without implementing a full backend security system.
 
-## How to run
-**Requirements**
--Node.js installed
-### Run Command
-node regex_program.js
+
